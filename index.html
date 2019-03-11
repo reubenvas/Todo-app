@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&lt;/salt&gt; :: ToDo</title>
+  <link rel="stylesheet" type="text/css" href="style/todo.css">
+  <script async src="js/todo.js"></script>
+</head>
+
+<body>
+  <header class="main-header">
+    <h1>ToDo</h1>
+    <p>...relieve your thoughts</p>
+  </header>
+
+  <section class="popup-container">
+    <div class="add-card-popup">
+      <header class="header-popup">
+        <h2>New Note</h2>
+        <button class="abort-btn popup-btn">- cancel -</button>
+      </header>
+      <div class="input-popup">
+        <p>Task:</p>
+        <input class="task-input" placeholder="Graduate from Salt" maxlength="22">
+      </div>
+      <div class="input-popup">
+        <p>Description:</p>
+        <input class="description-input" placeholder="Do your best and help others do their best" maxlength="27">
+      </div>
+      <div class="input-popup">
+        <p>Deadline:</p>
+        <input class="date-input" type="date" value="2019-04-13" min="2019-03-09" max="2019-05-14">
+      </div>
+      <button class="add-btn popup-btn">+ add +</button>
+    </div>
+  </section>
+
+  <main>
+    <div class="new-btn-section">
+      <button class="create-new-card-btn add-btn">+ add new note +</button>
+    </div>
+    <div class="empty-page-section">
+      <p class="empty-tag">nothing has been added yet...</p>
+    </div>
+    <section class="card-container">
+    </section>
+  </main>
+  <!-- Add your markup here -->
+</body>
+
+</html>

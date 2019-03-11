@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+body {
+    background-color: rgb(106, 187, 177);
+    font-family: 'Roboto', sans-serif;
+}
+
+:hover {
+    cursor: crosshair;
+}
+
+header {
+    display: flex;
+}
+
+.main-header {
+    background-color: rgba(252, 252, 250, 0.79);
+    box-shadow: 0px 2px 98px 65px  rgba(252, 252, 250, 0.79);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header p {
+    color: rgb(201, 170, 170);
+    margin-top: 5px;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 50px;
+    margin: 10px 0px ;
+}
+
+.main-header p, main p {
+    font-weight: 300;
+}
+
+p {
+    font-style: italic;
+}
+
+
+h1, h2, .add-card-popup p {
+    color: rgb(67, 56, 56);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button {
+    font-size: 1.1em;
+    border: 1px solid rgb(159, 156, 156);
+    background-color: rgba(255, 255, 255, 0.158);
+}
+
+.add-btn {
+    color: rgb(41, 7, 7);
+    border-radius: 3px;
+}
+
+input {
+    height: 22px;
+    width: 290px;
+    border-radius: 3px;
+    font-size: 14px;
+    border: 1px solid rgba(19, 19, 19, 0.146);
+    background-color: rgba(255, 255, 255, 0.66);
+}
+
+.new-btn-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.create-new-card-btn {
+    transition: 1.5s;
+}
+
+.create-new-card-btn:hover {
+    color: rgb(250, 242, 250);
+    background-color: rgb(41, 7, 7);
+    transform: scale(1.1);
+}
+
+.blur {
+    filter: blur(5px);   
+}
+
+.popup-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width:  100%;
+    display: none;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-card-popup{
+    min-width: 280px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    box-shadow: 0px 0px 300px 60px rgba(0,0,0,0.35);
+    background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(242,246,248,1) 7%, rgba(216,225,231,1) 25%, rgba(181,198,208,1) 54%, rgba(224,239,249,1) 81%, rgba(224,239,249,1) 100%);
+}
+
+.header-popup {
+    justify-content: space-between;
+}
+
+.popup-btn {
+    margin: 10px 0;
+    height: 26px; 
+}
+
+.abort-btn {
+    border: 1px solid rgb(187, 173, 187);
+    color: rgb(187, 173, 187);
+}
+
+.abort-btn:hover {
+    color: rgb(123, 92, 92);
+    background-color: rgba(255, 254, 254, 0.605);
+    border: 1px solid rgba(255, 254, 254, 0.605);
+    transition: 0.25s;
+}
+
+.add-btn {
+    margin-top: 28px;
+}
+
+.add-btn.popup-btn:hover {
+    background-color: rgb(169, 191, 193);
+    border: 1px solid rgb(169, 191, 193);
+    color: rgb(252, 252, 249);
+    transition: 0.5s;
+}
+
+.add-card-popup p {
+    font-size: 20px;
+}
+
+.header-popup h2 {
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.input-popup {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-card-popup ::placeholder {
+    color: rgba(67, 56, 56, 0.482);
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    max-width: 744px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background:  linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(218, 218, 218) 27%, rgb(165, 163, 163) 75%, rgb(97, 96, 96) 100%);
+    height: 120px;
+    width: 300px;
+    padding: 0 5px;
+    border: 1px solid rgb(143, 121, 121); 
+    border-radius: 5px;
+    margin: 10px 15px;
+    box-shadow: 0px 0px 1px 1px rgba(184,184,184,0.74);
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+    transition: 0.1s;
+}
+
+.card h3 {
+    font-weight: 400;
+    color: rgb(67, 56, 56);
+}
+
+.card p {
+    color: rgb(118, 107, 107);
+}
+
+.card-footer {
+    margin-right: 4px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+input:focus {
+    border: 2px solid rgb(99, 81, 81);
+    background-color: rgb(247, 255, 255);
+    transition: 0.5s;
+}
+
+.done {
+    background: linear-gradient(to bottom, rgb(199, 199, 199) 0%, rgb(172, 172, 172) 27%, rgb(136, 136, 136) 75%, rgb(50, 50, 50) 100%);
+    order: 1;
+}
+
+.done h3 {
+    color: rgb(0, 0, 0);
+}
+
+.done p {
+    color: rgb(58, 58, 58);
+}
+
+.done h3, .done p, .done .due-date {
+    text-decoration: line-through;
+    filter: blur(1px);
+}
+
+@media only screen and (min-device-width: 420px) {
+    main {
+        padding: 20px 11.5vw;
+    }
+
+    .card {
+        width: 330px;
+    }
+}
