@@ -60,7 +60,7 @@ function addNewNote() {
   createNote(taskInput.value, descriptionInput.value, dateInput.value);
   taskInput.value = '';
   descriptionInput.value = '';
-  dateInput.value = '2019-04-13';
+  dateInput.value = (new Date()).toLocaleDateString();
 }
 
 function createNote(task, description = '', date, key) {
@@ -107,5 +107,9 @@ function toggleEmptyTag(card) {
 function calculateDaysLeft(date) {
   const dueDate = new Date(date);
   const todaysDate = new Date();
-  return Math.round((dueDate - todaysDate) / 8.64e7);
+
+  if ((dueDate - todaysDate) / 8.64e7 < 1) {
+    return 0;
+  }
+  return Math.floor((dueDate - todaysDate) / 8.64e7);
 }

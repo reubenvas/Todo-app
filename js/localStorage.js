@@ -7,7 +7,13 @@ window.onload = () => {
     createNote(task, description, date, id);
     storage.push({ [id]: { task, description, date } });
   });
+
 };
+
+if (localStorage.length) {
+  const noContentP = document.querySelector('div.empty-page-section > p.empty-tag');
+  noContentP.textContent = ''
+}
 
 function randomizeNum() {
   return Math.floor(Math.random() * 1e6);
